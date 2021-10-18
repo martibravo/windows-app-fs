@@ -14,10 +14,13 @@
   <Target Name="XamlPreCompile" />
   
   <ItemGroup>
+    <None Include="README.md" />
     <Compile Include="App.fs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
+  
+  <ItemGroup />
   
   <ItemGroup>
     <PackageReference Update="FSharp.Core" Version="6.0.0" />
