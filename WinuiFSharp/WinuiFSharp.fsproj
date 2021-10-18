@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows10.0.20348.0</TargetFramework>
+    <Platforms>x86;x64</Platforms>
+    <AssemblyName>WinuiFSharp</AssemblyName>
+    <RootNamespace>MyApp</RootNamespace>
+    <TargetPlatformVersion>10.0.20348.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.20348.0</TargetPlatformMinVersion>
+    <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    <UseWinUI>True</UseWinUI>
+  </PropertyGroup>
+
+  <Target Name="XamlPreCompile" />
+  
+  <ItemGroup>
+    <Compile Include="App.fs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.0" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview2" />
+    <PackageReference Include="System.Runtime.WindowsRuntime" Version="5.0.0-preview.5.20278.1" />
+  </ItemGroup>
+
+</Project>
